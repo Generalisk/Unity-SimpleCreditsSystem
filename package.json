@@ -1,0 +1,17 @@
+{
+  "name": "com.generalisk.credits",
+  "version": "1.0.0-pre",
+  "displayName": "Simple Credits System",
+  "author": {
+    "name": "Generalisk",
+    "url": "https://generalisk.com/",
+    "email": "contact@generalisk.com"
+  },
+  "unity": "2019.2",
+  "dependencies": {
+    "com.unity.ugui": "2.0.0"
+  },
+  "license": "LICENSE",
+  "licensesUrl": "https://github.com/Generalisk/Unity-SimpleCreditsSystem/LICENSE",
+  "changelogUrl": "https://github.com/Generalisk/Unity-SimpleCreditsSystem/releases"
+}

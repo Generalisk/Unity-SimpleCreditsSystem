@@ -1,0 +1,11 @@
+{
+  "name": "Generalisk.Credits.Editor",
+  "rootNamespace": "Generalisk.Credits.Editor",
+  "references": [
+    "Generalisk.Credits"
+  ],
+  "excludePlatforms": [],
+  "includePlatforms": [
+    "Editor"
+  ]
+}
