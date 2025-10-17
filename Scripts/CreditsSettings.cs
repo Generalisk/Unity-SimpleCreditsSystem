@@ -1,3 +1,4 @@
+using System.IO;
 using System.Linq;
 using TMPro;
 #if UNITY_EDITOR
@@ -33,6 +34,9 @@ namespace Generalisk.Credits
             if (!EditorBuildSettings.TryGetConfigObject(ID, out dictionary))
             {
                 dictionary = CreateInstance<CreditsSettings>();
+
+                if (!Directory.Exists(DEFAULT_PATH + "/../"))
+                { Directory.CreateDirectory(DEFAULT_PATH + "/../"); }
 
                 AssetDatabase.CreateAsset(dictionary, DEFAULT_PATH);
                 EditorBuildSettings.AddConfigObject(ID, dictionary, true);
