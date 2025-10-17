@@ -24,7 +24,7 @@ namespace Generalisk.Credits
 
 #if UNITY_EDITOR
         internal const string ID = CreditsSystem.PACKAGE_ID;
-        internal const string DEFAULT_PATH = "Packages/" + CreditsSystem.PACKAGE_ID + "/Settings.asset";
+        internal const string DEFAULT_PATH = "Assets/Settings/Credits.asset";
 
         [InitializeOnLoadMethod]
         private static void Init()
