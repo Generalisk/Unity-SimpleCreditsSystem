@@ -12,3 +12,5 @@ Simple Credits System is A Unity Package that allows you to quickly & easily cre
 - Supports A multitude of font sizes
 - Credits Scene generated during runtime
 - Credits scroll speed adapts to the length of the Music
+
+## [Documentation](../.docs/README.md)
