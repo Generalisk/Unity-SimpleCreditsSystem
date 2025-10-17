@@ -11,3 +11,7 @@ To install this package, do either one of the following:
   ```
   https://github.com/Generalisk/Unity-SimpleCreditsSystem.git
   ```
+- Install via [OpenUPM](https://openupm.com/packages/com.generalisk.credits/)
+  ```
+  openupm add com.generalisk.credits
+  ```
