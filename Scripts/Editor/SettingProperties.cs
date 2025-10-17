@@ -8,7 +8,13 @@ namespace Generalisk.Credits.Editor
         public static void Draw(SerializedObject obj)
         {
             // Music
-            DrawProperty("music", SettingStyles.music, obj);
+            var music = obj.FindProperty("music");
+            DrawProperty(music, SettingStyles.music);
+
+            if (music.objectReferenceValue == null)
+            {
+                EditorGUILayout.HelpBox("No music provided!", MessageType.Error);
+            }
 
             // Font
             DrawProperty("font", SettingStyles.font, obj);
