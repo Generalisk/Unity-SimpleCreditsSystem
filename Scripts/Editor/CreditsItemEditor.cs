@@ -10,7 +10,7 @@ namespace Generalisk.Credits.Editor
         private Rect rect;
         private SerializedProperty property;
 
-        private static KeyValuePair<float, string>[] fontSizeFormats =
+        private static KeyValuePair<float, string>[] FontSizeFormats { get; } =
         {
             new KeyValuePair<float, string>(96, "Title"),
             new KeyValuePair<float, string>(72, "Heading"),
@@ -48,7 +48,7 @@ namespace Generalisk.Credits.Editor
                 {
                     var menu = new GenericMenu();
 
-                    foreach (var format in fontSizeFormats)
+                    foreach (var format in FontSizeFormats)
                     {
                         var key = format.Key;
                         var isSize = fontSize.floatValue == key;
@@ -118,7 +118,7 @@ namespace Generalisk.Credits.Editor
         {
             var fontSize = property.FindPropertyRelative("fontSize");
 
-            foreach (var format in fontSizeFormats)
+            foreach (var format in FontSizeFormats)
             {
                 if (fontSize.floatValue == format.Key)
                 { return new GUIContent(format.Value); }
