@@ -9,6 +9,9 @@ namespace Generalisk.Credits
     {
         internal const string PACKAGE_ID = "com.generalisk.credits";
 
+        /// <summary>
+        /// Loads & plays the credits
+        /// </summary>
         public static void Play()
         {
             // Generate & Open Credits Scene
@@ -21,6 +24,10 @@ namespace Generalisk.Credits
             GameObject.FindFirstObjectByType<AudioSource>().Play();
         }
 
+        /// <summary>
+        /// Generate the Credits Scene
+        /// </summary>
+        /// <returns>The generated scene instance</returns>
         private static Scene GenerateScene()
         {
             Scene currentScene = SceneManager.GetActiveScene();
