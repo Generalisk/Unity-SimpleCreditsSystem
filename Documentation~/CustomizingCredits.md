@@ -8,10 +8,10 @@ The credits can be customized using the credits settings, which can be located i
 > [!Important]
 > Editing the credits settings during runtime is highly discouraged. This is because that any changes you make during play mode will persist when you return to edit mode, causing any changes made to be semi-permenant.
 
-Alongside the contents of the credits, the credits settings gives you A few properties to play with as well, such as the music track & text font.
+Alongside the contents of the credits, the credits settings gives you a few properties to play with as well, such as the music track & text font.
 
 > [!Warning]
-> A music track must be provided, otherwise the Credits System will break during playback.
+> a music track must be provided, otherwise the Credits System will break during playback.
 
 <!--
 > [!Note]
