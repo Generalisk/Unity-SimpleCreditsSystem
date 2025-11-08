@@ -21,12 +21,21 @@ namespace Generalisk.Credits
         public TMP_FontAsset font = null;
         public CreditsItem[] items = { };
 
+        /// <summary>
+        /// (Runtime only! Use the Get() function for editor scripts)
+        /// </summary>
         public static CreditsSettings Instance { get; private set; } = null;
 
 #if UNITY_EDITOR
         internal const string ID = CreditsSystem.PACKAGE_ID;
         internal const string DEFAULT_PATH = "Assets/Settings/Credits.asset";
 
+        /// <summary>
+        /// Gets the settings instance, or generates a new one if it could not be found
+        /// 
+        /// (Editor only! Use the Instance property for runtime scripts)
+        /// </summary>
+        /// <returns>The settings instance</returns>
         [InitializeOnLoadMethod]
         public static CreditsSettings Get()
         {
