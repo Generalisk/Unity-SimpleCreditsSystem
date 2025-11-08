@@ -33,12 +33,20 @@ namespace Generalisk.Credits
             CreditsSettings dictionary = null;
             if (!EditorBuildSettings.TryGetConfigObject(ID, out dictionary))
             {
-                dictionary = CreateInstance<CreditsSettings>();
+                if (AssetDatabase.AssetPathExists(DEFAULT_PATH) &&
+                    AssetDatabase.GetMainAssetTypeAtPath(DEFAULT_PATH) == typeof(CreditsSettings))
+                {
+                    dictionary = AssetDatabase.LoadAssetAtPath<CreditsSettings>(DEFAULT_PATH);
+                }
+                else
+                {
+                    dictionary = CreateInstance<CreditsSettings>();
 
-                if (!Directory.Exists(DEFAULT_PATH + "/../"))
-                { Directory.CreateDirectory(DEFAULT_PATH + "/../"); }
+                    if (!Directory.Exists(DEFAULT_PATH + "/../"))
+                    { Directory.CreateDirectory(DEFAULT_PATH + "/../"); }
 
-                AssetDatabase.CreateAsset(dictionary, DEFAULT_PATH);
+                    AssetDatabase.CreateAsset(dictionary, DEFAULT_PATH);
+                }
                 EditorBuildSettings.AddConfigObject(ID, dictionary, true);
             }
 
