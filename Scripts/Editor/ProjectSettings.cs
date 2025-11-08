@@ -20,7 +20,7 @@ namespace Generalisk.Credits.Editor
         }
 
         public override void OnActivate(string searchContext, VisualElement rootElement)
-            => settings = new SerializedObject(CreditsSettings.Instance);
+            => settings = new SerializedObject(CreditsSettings.Get());
 
         public override void OnGUI(string searchContext)
         {
