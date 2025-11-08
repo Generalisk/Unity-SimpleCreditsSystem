@@ -1,6 +1,6 @@
 {
   "name": "com.generalisk.credits",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "displayName": "Simple Credits System",
   "author": {
     "name": "Generalisk",
@@ -12,8 +12,8 @@
     "com.unity.ugui": "2.0.0"
   },
   "license": "LICENSE.txt",
-  "licensesUrl": "https://github.com/Generalisk/Unity-SimpleCreditsSystem/blob/1.0.1/LICENSE.txt",
+  "licensesUrl": "https://github.com/Generalisk/Unity-SimpleCreditsSystem/blob/1.0.2/LICENSE.txt",
   "changelogUrl": "https://github.com/Generalisk/Unity-SimpleCreditsSystem/releases",
-  "documentationUrl": "https://github.com/Generalisk/Unity-SimpleCreditsSystem/tree/1.0.1/Documentation~",
+  "documentationUrl": "https://github.com/Generalisk/Unity-SimpleCreditsSystem/tree/1.0.2/Documentation~",
   "description": "Simple Credits System is a Unity Package that allows you to quickly & easily create a credits scene for your game. Simple Credits System simplifies the process by allowing you to customize the contents of the scene within the Project Settings & generate the in-game scene on the fly."
 }
