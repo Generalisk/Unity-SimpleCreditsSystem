@@ -28,34 +28,36 @@ namespace Generalisk.Credits
         internal const string DEFAULT_PATH = "Assets/Settings/Credits.asset";
 
         [InitializeOnLoadMethod]
-        private static void Init()
+        public static CreditsSettings Get()
         {
-            CreditsSettings dictionary = null;
-            if (!EditorBuildSettings.TryGetConfigObject(ID, out dictionary))
+            CreditsSettings settings = null;
+            if (!EditorBuildSettings.TryGetConfigObject(ID, out settings))
             {
                 if (AssetDatabase.AssetPathExists(DEFAULT_PATH) &&
                     AssetDatabase.GetMainAssetTypeAtPath(DEFAULT_PATH) == typeof(CreditsSettings))
                 {
-                    dictionary = AssetDatabase.LoadAssetAtPath<CreditsSettings>(DEFAULT_PATH);
+                    settings = AssetDatabase.LoadAssetAtPath<CreditsSettings>(DEFAULT_PATH);
                 }
                 else
                 {
-                    dictionary = CreateInstance<CreditsSettings>();
+                    settings = CreateInstance<CreditsSettings>();
 
                     if (!Directory.Exists(DEFAULT_PATH + "/../"))
                     { Directory.CreateDirectory(DEFAULT_PATH + "/../"); }
 
-                    AssetDatabase.CreateAsset(dictionary, DEFAULT_PATH);
+                    AssetDatabase.CreateAsset(settings, DEFAULT_PATH);
                 }
-                EditorBuildSettings.AddConfigObject(ID, dictionary, true);
+                EditorBuildSettings.AddConfigObject(ID, settings, true);
             }
 
             var preload = PlayerSettings.GetPreloadedAssets().ToList();
-            if (!preload.Contains(dictionary))
+            if (!preload.Contains(settings))
             {
-                preload.Add(dictionary);
+                preload.Add(settings);
                 PlayerSettings.SetPreloadedAssets(preload.ToArray());
             }
+
+            return settings;
         }
 #endif
 
